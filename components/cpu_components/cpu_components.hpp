@@ -8,6 +8,7 @@
 #include "registers.hpp"
 #include "stack_chip8.hpp"
 #include "timer_chip8.hpp"
+#include "cpu_display.hpp"
 
 class chip8_cpu_components
 {
@@ -18,5 +19,6 @@ class chip8_cpu_components
         registers       register_chip8;
         call_stack      stack_chip8;
         delay_timer     timer_chip8;
+        cpu_display     display_chip8;
 };
 #endif
