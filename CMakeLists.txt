@@ -17,22 +17,25 @@ add_subdirectory(components/memory_chip8)
 add_subdirectory(components/index_register)
 add_subdirectory(components/program_counter)
 add_subdirectory(components/stack_chip8)
-add_subdirectory(components/timer)
+add_subdirectory(components/timer_chip8)
 add_subdirectory(components/input_keys)
 add_subdirectory(components/cpu_components)
 add_subdirectory(components/instructions)
 add_subdirectory(components/sdl_wrapper)
+add_subdirectory(components/cpu_display)
 
 
 target_link_libraries(${PROJECT_NAME} PRIVATE   registers 
                                                 memory_chip8 
                                                 index_register 
                                                 program_counter 
-                                                stack_chip8 timer 
+                                                stack_chip8 
                                                 input_keys 
                                                 cpu_components 
                                                 instructions
+                                                timer_chip8
                                                 sdl_wrapper
+                                                cpu_display
                                                 SDL2::SDL2)
 
 if(MINGW)

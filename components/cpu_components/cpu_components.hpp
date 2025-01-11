@@ -7,6 +7,7 @@
 #include "memory_chip8.hpp"
 #include "registers.hpp"
 #include "stack_chip8.hpp"
+#include "timer_chip8.hpp"
 
 class chip8_cpu_components
 {
@@ -16,5 +17,6 @@ class chip8_cpu_components
         memory_chip_8   memory_chip8;
         registers       register_chip8;
         call_stack      stack_chip8;
+        delay_timer     timer_chip8;
 };
 #endif
