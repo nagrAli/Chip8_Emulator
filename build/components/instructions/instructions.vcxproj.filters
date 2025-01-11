@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instructions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_0xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_1xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_2xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_3xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_4xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_5xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_6xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_7xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_8xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_9xxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\myCode\Emulators\chip8\components\instructions\instruction_Axxx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\myCode\Emulators\chip8\components\instructions\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8D0B4D7B-8D7B-3133-B0BC-613BE52747CF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

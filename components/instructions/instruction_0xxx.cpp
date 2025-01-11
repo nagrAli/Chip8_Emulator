@@ -1,0 +1,37 @@
+#include <instruction_0xxx.hpp>
+
+void instruction_0xxx::return_from_subroutine(chip8_cpu_components *components)
+{
+    if(components != NULL)
+    {
+        uint16_t val = components->stack_chip8.pop_from_call_stack();
+        if(val != INVALID_PC)
+        {
+            components->program_counter_chip8 = val;
+        }
+        else
+        {
+            // do nothing
+        }
+    }
+    else
+    {
+        // do nothing
+    }
+}
+
+void instruction_0xxx::callback(chip8_cpu_components *components, uint16_t instruction)
+{
+    switch(instruction)
+    {
+        case INSTR_CLS:
+            // clear screen
+            break;
+        case INSTR_RET:
+            // Return from a subroutine
+            return_from_subroutine(components);
+            break;
+        default:
+            std::cout<<"instruction_0xxx: Invalid Opcode\n";
+    }
+}

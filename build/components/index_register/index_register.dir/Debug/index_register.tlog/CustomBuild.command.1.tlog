@@ -1,0 +1,10 @@
+^E:\MYCODE\EMULATORS\CHIP8\COMPONENTS\INDEX_REGISTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/myCode/Emulators/chip8 -BE:/myCode/Emulators/chip8/build --check-stamp-file E:/myCode/Emulators/chip8/build/components/index_register/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

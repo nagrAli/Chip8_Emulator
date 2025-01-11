@@ -1,0 +1,2 @@
+add_library(index_register index_register.cpp)
+target_include_directories(index_register PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

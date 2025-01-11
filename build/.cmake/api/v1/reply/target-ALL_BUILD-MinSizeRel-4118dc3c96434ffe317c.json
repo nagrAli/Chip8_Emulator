@@ -1,0 +1,60 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "Chip_8_Emulator::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "index_register::@9d9c54b772b01cf9320f"
+		},
+		{
+			"id" : "program_counter::@f29e4a61c03faf8a787e"
+		},
+		{
+			"id" : "stack_chip8::@74f4130bf0e5013bddac"
+		},
+		{
+			"id" : "timer::@9177dd0f2ab1fcb41fa6"
+		},
+		{
+			"id" : "registers::@0e9ba8bb6dc57cd107c1"
+		},
+		{
+			"id" : "memory_chip8::@a5127e0eaede866a245a"
+		},
+		{
+			"id" : "input_keys::@b9f504ede833b4ee7bad"
+		},
+		{
+			"id" : "instructions::@7a29c2a1716c7e7983f9"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,11 @@
+E:/myCode/Emulators/chip8/build/CMakeFiles/Chip_8_Emulator.dir
+E:/myCode/Emulators/chip8/build/CMakeFiles/ALL_BUILD.dir
+E:/myCode/Emulators/chip8/build/CMakeFiles/ZERO_CHECK.dir
+E:/myCode/Emulators/chip8/build/components/registers/CMakeFiles/registers.dir
+E:/myCode/Emulators/chip8/build/components/memory_chip8/CMakeFiles/memory_chip8.dir
+E:/myCode/Emulators/chip8/build/components/index_register/CMakeFiles/index_register.dir
+E:/myCode/Emulators/chip8/build/components/program_counter/CMakeFiles/program_counter.dir
+E:/myCode/Emulators/chip8/build/components/stack_chip8/CMakeFiles/stack_chip8.dir
+E:/myCode/Emulators/chip8/build/components/timer/CMakeFiles/timer.dir
+E:/myCode/Emulators/chip8/build/components/input_keys/CMakeFiles/input_keys.dir
+E:/myCode/Emulators/chip8/build/components/instructions/CMakeFiles/instructions.dir
