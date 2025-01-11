@@ -6,11 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 find_package(SDL2 REQUIRED)
 
-# Include SDL2 headers
-
 add_executable(${PROJECT_NAME} main/main.cpp)
-
-# Link SDL2 to your project
 
 add_subdirectory(components/registers)
 add_subdirectory(components/memory_chip8)
