@@ -21,6 +21,7 @@ add_subdirectory(components/timer)
 add_subdirectory(components/input_keys)
 add_subdirectory(components/cpu_components)
 add_subdirectory(components/instructions)
+add_subdirectory(components/sdl_wrapper)
 
 
 target_link_libraries(${PROJECT_NAME} PRIVATE   registers 
@@ -31,6 +32,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE   registers
                                                 input_keys 
                                                 cpu_components 
                                                 instructions
+                                                sdl_wrapper
                                                 SDL2::SDL2)
 
 if(MINGW)
