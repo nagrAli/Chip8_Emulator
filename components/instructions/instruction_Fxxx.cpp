@@ -66,3 +66,12 @@ void instruction_fxxx::fx55(chip8_cpu_components *components, uint16_t instructi
         components->memory_chip8.write_instruction(components->index_register_chip8 + i, components->register_chip8.get_register_value(i));
     }
 }
+
+void instruction_fxxx::fx65(chip8_cpu_components *components, uint16_t instruction)
+{
+    uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
+    for(uint8_t i = 0; i <= x; i++)
+    {
+        components->register_chip8.set_register_value(i, components->memory_chip8.read_instruction(components->index_register_chip8 + i));
+    }
+}
