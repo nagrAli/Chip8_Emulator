@@ -29,3 +29,9 @@ void instruction_fxxx::fx15(chip8_cpu_components *components, uint16_t instructi
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     components->timer_chip8 = components->register_chip8.get_register_value(x);
 }
+
+void instruction_fxxx::fx18(chip8_cpu_components *components, uint16_t instruction)
+{
+    uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
+    components->sound_timer_chip8 = components->register_chip8.get_register_value(x);
+}
