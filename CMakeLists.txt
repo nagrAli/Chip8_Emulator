@@ -19,6 +19,7 @@ add_subdirectory(components/cpu_components)
 add_subdirectory(components/instructions)
 add_subdirectory(components/sdl_wrapper)
 add_subdirectory(components/cpu_display)
+add_subdirectory(components/cpu_keypad)
 
 
 target_link_libraries(${PROJECT_NAME} PRIVATE   registers 
@@ -32,6 +33,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE   registers
                                                 timer_chip8
                                                 sdl_wrapper
                                                 cpu_display
+                                                cpu_keypad
                                                 SDL2::SDL2)
 
 if(MINGW)

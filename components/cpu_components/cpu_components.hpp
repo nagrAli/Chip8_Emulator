@@ -9,6 +9,7 @@
 #include "stack_chip8.hpp"
 #include "timer_chip8.hpp"
 #include "cpu_display.hpp"
+#include "cpu_keypad.hpp"
 
 class chip8_cpu_components
 {
@@ -20,5 +21,6 @@ class chip8_cpu_components
         call_stack      stack_chip8;
         delay_timer     timer_chip8;
         cpu_display     display_chip8;
+        cpu_keypad      keypad_chip8;
 };
 #endif
