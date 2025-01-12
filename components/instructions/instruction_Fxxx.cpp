@@ -3,6 +3,7 @@
 constexpr uint16_t  VX_MASK = 0x0F00;
 constexpr uint16_t  MAX_KEYS = 16;
 constexpr uint8_t   VX_SHIFT = 8;
+constexpr uint8_t   FONTSET_BYTE_SIZE = 5;
 
 void instruction_fxxx::fx07(chip8_cpu_components *components, uint16_t instruction)
 {
@@ -40,4 +41,10 @@ void instruction_fxxx::fx1E(chip8_cpu_components *components, uint16_t instructi
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     components->index_register_chip8 += components->register_chip8.get_register_value(x);
+}
+
+void instruction_fxxx::fx29(chip8_cpu_components *components, uint16_t instruction)
+{
+    uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
+    components->index_register_chip8 = FONTSET_START_ADDRESS + (components->register_chip8.get_register_value(x) * FONTSET_BYTE_SIZE);
 }
