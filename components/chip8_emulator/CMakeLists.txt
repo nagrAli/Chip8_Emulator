@@ -1,0 +1,3 @@
+add_library(chip8_emulator chip8_emulator.cpp)
+target_include_directories(chip8_emulator PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(chip8_emulator PRIVATE cpu_components instructions sdl_wrapper)
