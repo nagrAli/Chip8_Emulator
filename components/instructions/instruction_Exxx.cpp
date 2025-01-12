@@ -13,7 +13,7 @@ void instruction_exxx::exnn(chip8_cpu_components *components, uint16_t instructi
 
     if (instruction_byte == INSTR_0x9E)
     {
-        if (components->keypad_chip8.get_key(components->register_chip8.get_register(register_x)))
+        if (components->keypad_chip8.get_key(components->register_chip8.get_register_value(register_x)))
         {
             components->program_counter_chip8 += 2;
         }
@@ -24,7 +24,7 @@ void instruction_exxx::exnn(chip8_cpu_components *components, uint16_t instructi
     }
     else if (instruction_byte == INSTR_0xA1)
     {
-        if (!components->keypad_chip8.get_key(components->register_chip8.get_register(register_x)))
+        if (!components->keypad_chip8.get_key(components->register_chip8.get_register_value(register_x)))
         {
             components->program_counter_chip8 += 2;
         }
