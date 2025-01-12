@@ -3,7 +3,7 @@
 #include "chip8_emulator.hpp"
 int main()
 {
-    chip8_emulator emulator;
+    chip8_emulator emulator("xyz.ch8");
     return 0;
 }
 
