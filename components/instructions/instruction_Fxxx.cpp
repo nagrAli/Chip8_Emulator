@@ -48,3 +48,21 @@ void instruction_fxxx::fx29(chip8_cpu_components *components, uint16_t instructi
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     components->index_register_chip8 = FONTSET_START_ADDRESS + (components->register_chip8.get_register_value(x) * FONTSET_BYTE_SIZE);
 }
+
+void instruction_fxxx::fx33(chip8_cpu_components *components, uint16_t instruction)
+{
+    uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
+    uint8_t value = components->register_chip8.get_register_value(x);
+    components->memory_chip8.write_character(components->index_register_chip8, (value / 100));
+    components->memory_chip8.write_character(components->index_register_chip8 + 1, ((value / 10) % 10));
+    components->memory_chip8.write_character(components->index_register_chip8 + 2, (value % 10));
+}
+
+void instruction_fxxx::fx55(chip8_cpu_components *components, uint16_t instruction)
+{
+    uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
+    for(uint8_t i = 0; i <= x; i++)
+    {
+        components->memory_chip8.write_instruction(components->index_register_chip8 + i, components->register_chip8.get_register_value(i));
+    }
+}
