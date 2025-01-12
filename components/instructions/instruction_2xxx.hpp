@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <cpu_components.hpp>
 
-constexpr uint16_t ADDRESS_MASK = 0x0FFFu;
-
 class instruction_2xxx
 {
     private:

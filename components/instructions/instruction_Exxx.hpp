@@ -4,7 +4,7 @@
 #include <iostream>
 #include "cpu_components.hpp"
 
-class instruction_exxx
+class instruction_Exxx
 {
     private:
         static void exnn(chip8_cpu_components *components, uint16_t instruction);

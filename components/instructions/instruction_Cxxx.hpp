@@ -1,5 +1,5 @@
-#ifndef _INSTR_BXXX_HPP_
-#define _INSTR_BXXX_HPP_
+#ifndef _INSTR_CXXX_HPP_
+#define _INSTR_CXXX_HPP_
 
 #include <iostream>
 #include <stdlib.h>

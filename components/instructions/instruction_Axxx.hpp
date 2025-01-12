@@ -6,8 +6,6 @@
 #include <cstdint>
 #include <cpu_components.hpp>
 
-constexpr uint16_t ADDRESS_MASK  = 0x0FFF;
-
 class instruction_Axxx
 {
     private:

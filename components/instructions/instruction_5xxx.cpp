@@ -1,5 +1,10 @@
 #include "instruction_5xxx.hpp"
 
+constexpr uint16_t VY_MASK      = 0x00FFu;
+constexpr uint16_t VX_MASK      = 0x0F00u;
+constexpr uint8_t  VX_SHIFT     = 8u;
+constexpr uint8_t  VY_SHIFT     = 4u;
+
 void instruction_5xxx::skip_instruction(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t vx_index = (instruction & VX_MASK) >> VX_SHIFT;

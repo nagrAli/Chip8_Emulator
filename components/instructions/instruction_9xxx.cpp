@@ -1,5 +1,10 @@
 #include "instruction_9xxx.hpp"
 
+constexpr uint16_t INDEX_MASK_VX   = 0x0F00;
+constexpr uint16_t INDEX_MASK_VY   = 0x00F0;
+constexpr uint8_t  SHIFT_REG_X     = 8u;
+constexpr uint8_t  SHIFT_REG_Y     = 4u;
+
 void instruction_9xxx::perform_operation(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t index_reg_x = (instruction & INDEX_MASK_VX) >> SHIFT_REG_X; 

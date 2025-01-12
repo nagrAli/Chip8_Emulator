@@ -5,7 +5,6 @@
 #include <cstdint>
 #include <cpu_components.hpp>
 
-constexpr uint16_t ADDRESS_MASK = 0x0FFFu;
 class instruction_1xxx
 {
     public:

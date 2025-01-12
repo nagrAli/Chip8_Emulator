@@ -1,5 +1,7 @@
 #include "instruction_2xxx.hpp"
 
+constexpr uint16_t ADDRESS_MASK = 0x0FFFu;
+
 void instruction_2xxx::call_sub_routine(chip8_cpu_components *components, uint16_t instruction)
 {
     uint16_t address = instruction & ADDRESS_MASK;

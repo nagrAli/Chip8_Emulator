@@ -4,7 +4,7 @@
 #include <iostream>
 #include "cpu_components.hpp"
 
-class instruction_fxxx
+class instruction_Fxxx
 {
     private:
         static void fx07(chip8_cpu_components *components, uint16_t instruction);

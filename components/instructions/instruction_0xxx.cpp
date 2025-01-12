@@ -1,5 +1,8 @@
 #include <instruction_0xxx.hpp>
 
+constexpr uint16_t INSTR_CLS = 0x00E0;
+constexpr uint16_t INSTR_RET = 0x00EE;
+
 void instruction_0xxx::return_from_subroutine(chip8_cpu_components *components)
 {
     if(components != NULL)

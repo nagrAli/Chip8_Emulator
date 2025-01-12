@@ -1,5 +1,8 @@
 #include "instruction_4xxx.hpp"
 
+constexpr uint16_t DATA_MASK    = 0x00FFu;
+constexpr uint16_t VX_MASK      = 0x0F00u;
+
 void instruction_4xxx::skip_next(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t data = instruction & DATA_MASK;

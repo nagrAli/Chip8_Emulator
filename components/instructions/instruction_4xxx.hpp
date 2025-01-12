@@ -6,10 +6,6 @@
 #include <cstdint>
 #include <cpu_components.hpp>
 
-
-constexpr uint16_t DATA_MASK    = 0x00FFu;
-constexpr uint16_t VX_MASK      = 0x0F00u;
-
 class instruction_4xxx
 {
     private:

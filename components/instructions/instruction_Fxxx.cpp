@@ -19,13 +19,13 @@ typedef enum
     FX65 = 0x0065
 } fxxx_sub_instructions_t;
 
-void instruction_fxxx::fx07(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::fx07(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     components->register_chip8.set_register_value(x, components->timer_chip8);
 }
 
-void instruction_fxxx::fx0A(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::fx0A(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     for(uint8_t i = 0; i < MAX_KEYS; i++)
@@ -39,31 +39,31 @@ void instruction_fxxx::fx0A(chip8_cpu_components *components, uint16_t instructi
     components->program_counter_chip8 -= 2;
 }
 
-void instruction_fxxx::fx15(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::fx15(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     components->timer_chip8 = components->register_chip8.get_register_value(x);
 }
 
-void instruction_fxxx::fx18(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::fx18(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     components->sound_timer_chip8 = components->register_chip8.get_register_value(x);
 }
 
-void instruction_fxxx::fx1E(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::fx1E(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     components->index_register_chip8 += components->register_chip8.get_register_value(x);
 }
 
-void instruction_fxxx::fx29(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::fx29(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     components->index_register_chip8 = FONTSET_START_ADDRESS + (components->register_chip8.get_register_value(x) * FONTSET_BYTE_SIZE);
 }
 
-void instruction_fxxx::fx33(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::fx33(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     uint8_t value = components->register_chip8.get_register_value(x);
@@ -72,7 +72,7 @@ void instruction_fxxx::fx33(chip8_cpu_components *components, uint16_t instructi
     components->memory_chip8.write_character(components->index_register_chip8 + 2, (value % 10));
 }
 
-void instruction_fxxx::fx55(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::fx55(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     for(uint8_t i = 0; i <= x; i++)
@@ -81,7 +81,7 @@ void instruction_fxxx::fx55(chip8_cpu_components *components, uint16_t instructi
     }
 }
 
-void instruction_fxxx::fx65(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::fx65(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t x = (instruction & VX_MASK) >> VX_SHIFT;
     for(uint8_t i = 0; i <= x; i++)
@@ -90,7 +90,7 @@ void instruction_fxxx::fx65(chip8_cpu_components *components, uint16_t instructi
     }
 }
 
-void instruction_fxxx::execute_instruction(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::execute_instruction(chip8_cpu_components *components, uint16_t instruction)
 {
     fxxx_sub_instructions_t sub_instruction = static_cast<fxxx_sub_instructions_t>(instruction & SUB_INSTRUCTION_MASK);
     switch(sub_instruction)
@@ -128,7 +128,7 @@ void instruction_fxxx::execute_instruction(chip8_cpu_components *components, uin
     }
 }
 
-void instruction_fxxx::callback(chip8_cpu_components *components, uint16_t instruction)
+void instruction_Fxxx::callback(chip8_cpu_components *components, uint16_t instruction)
 {
     execute_instruction(components, instruction);
 }
