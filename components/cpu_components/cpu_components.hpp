@@ -14,13 +14,13 @@
 class chip8_cpu_components
 {
     public:
-        program_counter program_counter_chip8;
-        index_register  index_register_chip8;
-        memory_chip_8   memory_chip8;
-        registers       register_chip8;
-        call_stack      stack_chip8;
-        delay_timer     timer_chip8;
-        cpu_display     display_chip8;
-        cpu_keypad      keypad_chip8;
+        program_counter     program_counter_chip8;
+        index_register      index_register_chip8;
+        memory_chip_8       memory_chip8;
+        registers           register_chip8;
+        call_stack          stack_chip8;
+        delay_timer         timer_chip8;
+        cpu_display         display_chip8;
+        cpu_keypad          keypad_chip8;
 };
 #endif
