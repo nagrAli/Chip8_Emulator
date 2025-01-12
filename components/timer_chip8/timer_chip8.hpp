@@ -5,8 +5,9 @@
 class delay_timer
 {
     private:
-        uint8_t delay_counter;
+        uint8_t delay_counter = 0;
     public:
-        delay_timer();
+        delay_timer& operator=(uint8_t val);
+        operator uint8_t() const;
 };
 #endif

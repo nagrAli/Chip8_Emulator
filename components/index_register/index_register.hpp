@@ -6,7 +6,7 @@
 class index_register
 {
     private:
-        uint16_t reg;
+        uint16_t reg = 0;
     public:
         index_register& operator=(uint16_t val);
         operator uint16_t() const;
