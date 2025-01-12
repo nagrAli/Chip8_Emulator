@@ -12,6 +12,8 @@ add_library(instructions instructions.cpp instruction_0xxx.cpp
                                           instruction_Bxxx.cpp
                                           instruction_Cxxx.cpp
                                           instruction_Dxxx.cpp
+                                          instruction_Exxx.cpp
+                                          instruction_Fxxx.cpp
                                           )
 target_include_directories(instructions PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(instructions PRIVATE cpu_components)
