@@ -1,0 +1,2 @@
+add_library(cpu_sound_timer cpu_sound_timer.cpp)
+target_include_directories(cpu_sound_timer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

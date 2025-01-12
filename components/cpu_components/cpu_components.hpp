@@ -10,6 +10,7 @@
 #include "timer_chip8.hpp"
 #include "cpu_display.hpp"
 #include "cpu_keypad.hpp"
+#include "cpu_sound_timer.hpp"
 
 class chip8_cpu_components
 {
@@ -22,5 +23,6 @@ class chip8_cpu_components
         delay_timer         timer_chip8;
         cpu_display         display_chip8;
         cpu_keypad          keypad_chip8;
+        cpu_sound_timer     sound_timer_chip8;
 };
 #endif
