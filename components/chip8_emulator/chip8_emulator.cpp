@@ -15,8 +15,16 @@ chip8_emulator::chip8_emulator(std::string rom_path)
         std::cout << "Error loading ROM" << std::endl;
         exit(1);
     }
+    load_fontset();
 }
 
+void chip8_emulator::load_fontset()
+{
+    for(int i = 0; i < FONTSET_SIZE; i++)
+    {
+        components.memory_chip8.write_instruction(FONTSET_START_ADDRESS + i, font_set[i]);
+    }
+}
 uint8_t chip8_emulator::load_rom(std::string rom_path)
 {
     std::ifstream rom_file(rom_path, std::ios::binary);
