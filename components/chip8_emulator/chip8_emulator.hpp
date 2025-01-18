@@ -10,6 +10,7 @@
 class chip8_emulator
 {
     private:
+        uint32_t rom_size_emu = 0;
         chip8_cpu_components components;
         Instructions instructions;
         sdl_display display;

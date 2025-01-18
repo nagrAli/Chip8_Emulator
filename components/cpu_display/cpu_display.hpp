@@ -10,8 +10,8 @@ constexpr uint16_t CPU_SCREEN_HEIGHT = 32;
 class cpu_display
 {
     private:
-        std::unique_ptr<uint8_t[]> display;
     public:
+        std::unique_ptr<uint8_t[]> display;
         cpu_display();
         void clear_display();
         void invert_pixel(uint8_t x, uint8_t y);

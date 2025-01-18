@@ -8,7 +8,7 @@ sdl_display::sdl_display() : window(nullptr, SDL_DestroyWindow), renderer(nullpt
         exit(1);
     }
 
-    window.reset(SDL_CreateWindow(TAG, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_SCREEN_WIDTH, SDL_SCREEN_HEIGHT, SDL_WINDOW_SHOWN));
+    window.reset(SDL_CreateWindow(TAG, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_SCREEN_WIDTH * SDL_PIXEL_SIZE, SDL_SCREEN_HEIGHT * SDL_PIXEL_SIZE, SDL_WINDOW_SHOWN));
     if (window == nullptr)
     {
         std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
@@ -49,7 +49,7 @@ void sdl_display::update_screen(const std::unique_ptr<uint8_t[]>& screen)
             SDL_RenderFillRect(renderer.get(), &rect);
         }
     }
-    SDL_RenderPresent(renderer.get());
+    // SDL_RenderPresent(renderer.get());
 }
 
 void sdl_display::clear_screen()
