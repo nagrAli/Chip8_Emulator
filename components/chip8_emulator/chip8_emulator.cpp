@@ -4,7 +4,7 @@
 constexpr uint16_t ROM_START_ADDRESS = 0x200;
 constexpr uint16_t ROM_END_ADDRESS = 0xFFF;
 constexpr uint8_t  INTSRUCTION_SHIFT = 8u;
-chip8_emulator::chip8_emulator(std::string rom_path)
+chip8_emulator::chip8_emulator(std::string rom_path, std::array<SDL_Keycode, KEYPAD_SIZE>& keypad, SDL_Keycode quit_key): sdl_manager(keypad, quit_key)
 {
     uint8_t status = load_rom(rom_path);
     if(status == 0)
@@ -54,16 +54,18 @@ uint8_t chip8_emulator::load_rom(std::string rom_path)
 void chip8_emulator::run()
 {
     components.program_counter_chip8 = ROM_START_ADDRESS;
-    while(components.program_counter_chip8 < rom_size_emu)
+    bool quit = false;
+    while(quit == false)
     {
+
         uint8_t msb = components.memory_chip8.read_instruction(components.program_counter_chip8);
         uint8_t lsb = components.memory_chip8.read_instruction(components.program_counter_chip8 + 1);
         uint16_t instruction = (static_cast<uint16_t>(msb) << INTSRUCTION_SHIFT) | static_cast<uint16_t>(lsb);
-
+        quit = sdl_manager.handle_events(components.keypad_chip8.get_key_map());
         components.program_counter_chip8 += 2;
 
         instructions.execute_instruction(&components, instruction);
-        display.update_screen(components.display_chip8.display);
+        sdl_manager.update_screen(components.display_chip8.display);
 
         if(components.timer_chip8 > 0)
         {
@@ -82,6 +84,7 @@ void chip8_emulator::run()
         {
             // do nohting
         }
+        SDL_Delay(16);
     }
 
 }
