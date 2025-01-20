@@ -11,6 +11,7 @@ class instruction_0xxx
         static void callback(chip8_cpu_components *components, uint16_t instruction);
     private:
         static void return_from_subroutine(chip8_cpu_components *components);
+        static void clear_screen(chip8_cpu_components *components);
 
 };
 #endif

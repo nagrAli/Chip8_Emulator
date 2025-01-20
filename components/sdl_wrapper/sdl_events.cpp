@@ -40,7 +40,6 @@ bool sdl_event_handler::handle_events(std::unique_ptr<uint8_t[]>& key_pad_chip8)
             if(key_map.find(event.key.keysym.sym) != key_map.end())
             {
                 key_pad_chip8[key_map[event.key.keysym.sym]] = 0;
-                std::cout << "Key released: " << key_map[event.key.keysym.sym] << std::endl;
             }
             else
             {

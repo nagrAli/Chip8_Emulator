@@ -23,12 +23,25 @@ void instruction_0xxx::return_from_subroutine(chip8_cpu_components *components)
     }
 }
 
+void instruction_0xxx::clear_screen(chip8_cpu_components *components)
+{
+    if(components != NULL)
+    {
+        components->display_chip8.clear_display();
+    }
+    else
+    {
+        // do nothing
+    }
+}
+
 void instruction_0xxx::callback(chip8_cpu_components *components, uint16_t instruction)
 {
     switch(instruction)
     {
         case INSTR_CLS:
             // clear screen
+            clear_screen(components);
             break;
         case INSTR_RET:
             // Return from a subroutine

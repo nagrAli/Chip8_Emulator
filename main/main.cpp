@@ -17,17 +17,6 @@ int main()
 {
     chip8_emulator emulator("../test_roms/test_opcode.ch8", CHIP8_KEYMAP, SDLK_ESCAPE);
     emulator.run();
-    // std::unique_ptr<uint8_t[]> key_map(new uint8_t[TOTAL_KEYS]);
-    // std::array<uint8_t, TOTAL_KEYS> keypad = {SDLK_1, SDLK_2, SDLK_3, SDLK_4, SDLK_q, SDLK_w, SDLK_e, SDLK_r, SDLK_a, SDLK_s, SDLK_d, SDLK_f, SDLK_z, SDLK_x, SDLK_c, SDLK_v};
-    // SDL_Keycode quit_key = SDLK_ESCAPE;
-    // sdl_event_handler sdl_events(keypad, quit_key);
-    // bool quit = false;
-    // while(quit == false)
-    // {
-    //     quit = sdl_events.handle_events(key_map);
-    // }
-    
-
     return 0;
 }
 

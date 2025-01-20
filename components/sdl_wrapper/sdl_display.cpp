@@ -49,7 +49,7 @@ void sdl_display::update_screen(const std::unique_ptr<uint8_t[]>& screen)
             SDL_RenderFillRect(renderer.get(), &rect);
         }
     }
-    // SDL_RenderPresent(renderer.get());
+    SDL_RenderPresent(renderer.get());
 }
 
 void sdl_display::clear_screen()
