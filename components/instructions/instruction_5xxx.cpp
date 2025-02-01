@@ -1,6 +1,6 @@
 #include "instruction_5xxx.hpp"
 
-constexpr uint16_t VY_MASK      = 0x00FFu;
+constexpr uint16_t VY_MASK      = 0x00F0u;
 constexpr uint16_t VX_MASK      = 0x0F00u;
 constexpr uint8_t  VX_SHIFT     = 8u;
 constexpr uint8_t  VY_SHIFT     = 4u;

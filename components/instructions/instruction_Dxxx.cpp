@@ -8,13 +8,15 @@ constexpr uint8_t VX_SHIFT = 8u;
 constexpr uint8_t VY_SHIFT = 4u;
 constexpr uint8_t SPRITE_MASK = 0x80;
 constexpr uint8_t SPRITE_LENGTH = 8;
+constexpr uint8_t DISPLAY_WIDTH = 64;
+constexpr uint8_t DISPLAY_HEIGHT = 32;
 
 void instruction_Dxxx::draw_sprite(chip8_cpu_components *components, uint16_t instruction)
 {
     uint8_t vx = (instruction & VX_MASK) >> VX_SHIFT;
     uint8_t vy = (instruction & VY_MASK) >> VY_SHIFT;
-    uint8_t x = components->register_chip8.get_register_value(vx);
-    uint8_t y = components->register_chip8.get_register_value(vy);
+    uint8_t x = components->register_chip8.get_register_value(vx) % DISPLAY_WIDTH;
+    uint8_t y = components->register_chip8.get_register_value(vy) % DISPLAY_HEIGHT;
     uint8_t height = instruction & N_MASK;
     uint8_t pixel = 0;
 
